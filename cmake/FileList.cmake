@@ -336,6 +336,19 @@ set(ALLEGRO_SRC_PSP_FILES
         src/psp/pvtable8.c
         )
 
+set(ALLEGRO_SRC_PS2_FILES
+        src/ps2/ps2drivers.c
+        src/ps2/ps2audio.c
+        src/ps2/ps2bitmap.c
+        src/ps2/ps2file.c
+        src/ps2/ps2gfx.c
+        src/ps2/ps2joystick.c
+        src/ps2/ps2keyboard.c
+        src/ps2/ps2mouse.c
+        src/ps2/ps2system.c
+        src/ps2/ps2timer.c
+        )
+
 set(ALLEGRO_INCLUDE_ALLEGRO_FILES
         include/allegro/3d.h
         include/allegro/3dmaths.h

@@ -15,7 +15,8 @@
 #   BCC32
 #   Watcom
 #   DMC
-#   PSP port?
+#   PSP port
+#   PS2 port?
 
 #-----------------------------------------------------------------------------#
 #
@@ -311,6 +312,11 @@ if(PSP)
     set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -G0")
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -G0 -fno-exceptions -fno-rtti")
 endif(PSP)
+
+if(PS2)
+    # TODO
+    set(ALLEGRO_PS2 1)
+endif(PS2)
 
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${WFLAGS} ${WFLAGS_C_ONLY}")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${WFLAGS} ${WFLAGS_CXX_ONLY}")
@@ -701,6 +707,13 @@ if(PSP)
     m pspaudio pspgu psprtc pspdebug pspdisplay pspge pspctrl pspsdk c pspnet pspnet_inet pspnet_resolver psputility pspuser pspkernel)
 endif(PSP)
 
+# -- PS2 --
+
+if(PS2)
+   # TODO
+endif(PS2)
+   
+
 #-----------------------------------------------------------------------------#
 #
 # Generate and install headers
@@ -875,6 +888,10 @@ if(PSP)
     target_link_libraries(allegro alleg-main)
     install_our_library(alleg-main)
 endif(PSP)
+
+if(PS2)
+    # TODO
+endif(PS2)
 
 #-----------------------------------------------------------------------------#
 #
